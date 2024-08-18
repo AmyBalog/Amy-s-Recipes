@@ -1,0 +1,18 @@
+
+.navbar-brand img {
+    margin-right: 10px
+}
+.img-fluid {
+    width: 70%;
+    height: auto;
+}
+
+.background-color{
+    background-color: #BEC6A070 ;
+}
+.title-color h1{
+  color : #708871 !important;
+} 
+.container card {
+    margin: 50px ;
+}
