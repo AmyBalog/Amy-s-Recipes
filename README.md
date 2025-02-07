@@ -1,9 +1,9 @@
-# Static website hosted on AWS S3
-http://my-recipes-website.s3-website-us-west-2.amazonaws.com
+# Steps to Create a Static Website Hosted on AWS S3
 
-**Steps to create a static website using S3 on AWS**
+Link to recipe website hosted on AWS S3: <br>
+http://my-recipes-website.s3-website-us-west-2.amazonaws.com <br><br>
 
-First, create an S3 bucket on AWS:
+**Step 1: Create an S3 bucket on AWS:**
 1. If not already created, create an AWS account
 2. In the Search bar, type S3 and enter
 3. Click on Create bucket
@@ -17,7 +17,7 @@ First, create an S3 bucket on AWS:
    - But, to create a static website, we must disable this and allow public access
 9. Can leave the remaining options on default and click Create bucket
 
-Adding items to S3 bucket:
+**Step 2: Adding items to S3 bucket:**
 1. Click on the bucket you just created
 2. Click on Upload to upload files or folders into your S3 bucket
 3. If you click on the uploaded object, you can click on it to view its properties
@@ -26,7 +26,7 @@ Adding items to S3 bucket:
      - This means you cannot access the item through the public URL, but can access via the Open button from the S3 bucket. This is an S3 pre-signed URL that contains a signature that verifies your credentials encoded.
      - The public URL needs to have a Bucket Policy to enable public access. 
 
-Create a Bucket Policy to allow public access:
+**Step 3: Create a Bucket Policy to allow public access:**
 1.  In your S3 bucket, click on the Permissions tab
 2.  Click Edit to make sure the Block all public access is unchecked.
      - This needs to be unchecked to allow public access
@@ -41,7 +41,7 @@ Create a Bucket Policy to allow public access:
     - This policy means that get objects are allowed from anyone on any object in that S3 bucket.
 10. Now the object URL is publicly available
 
-How to create a static website
+**Step 4: How to create a static website**
 1. If the bucket policy does not allow public read, you will get a 403 Forbidden error
 2. Click into the S3 bucket and click on Properties
 3. Scroll to the bottom and you will see Static website hosting is disabled
@@ -52,9 +52,9 @@ How to create a static website
 8. Click on Properties again and scroll down to the Static Website Hosting, there is a Bucket website endpoint URL
 9. Copy the URL and paste it into a browser. You now have access to your website.
 
-Add Route 53
-- This will provide DDoS protection, a custom URL, and redirection
-- AWS does charge for this feature
+**Step 5: Add Route 53**
+   - This will provide DDoS protection, a custom URL, and redirection
+   - AWS does charge for this feature
 1. Go to the Route 53 console
 2. Click Registered domains in the left column to first register a domain name
 3. Add the domain to the cart and register your information
@@ -62,7 +62,7 @@ Add Route 53
 5. Enter your domain name
 6. Choose Public Hosted Zone, then click Create
 
-Add CloudFront
+**Step 6: Add CloudFront**
 - This optional feature will reduce latency for your users by caching the content at an Edge location and reduce latency. DDoS protection is also provided.
 1. Go to the CloudFront console
 2. Click Create a CloudFront distribution
